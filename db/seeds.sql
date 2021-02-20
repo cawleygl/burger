@@ -1,4 +1,4 @@
 USE burgers_db;
 
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("New Bacon-ings", 0), ("Mushroom With A View Burger", 0), ("Yes I Cayenne Burger", 0);
+INSERT INTO burgers (burger_name)
+VALUES ("New Bacon-ings"), ("Baby You Can Chive My Car Burger"), ("Mushroom With A View Burger"), ("Yes I Cayenne Burger"), ("Mission A-Corn-Plished Burger"), ("Totally Radish Burger");
