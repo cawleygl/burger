@@ -1,8 +1,25 @@
 <h1>Burger Time!</h1>
 <h2>With Bob's Burgers</h2>
 
+<h1>Devour These Burgers!</h1>
+
 <ul>
-{{#each burgers }}
-  <li>{{burger_name}}</li>
-{{/each}}
+    {{#each burgers}}
+    {{#unless devoured}}
+    <li>
+        {{burger_name}}
+        <button class="devour-burger" data-id="{{this.id}}">Devour</button>
+    </li>
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h1>Yum! These Burgers Sure Were Good!</h1>
+
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    <li>{{burger_name}}</li>
+    {{/if}}
+    {{/each}}
 </ul>
