@@ -14,14 +14,13 @@ const orm = {
     insertOne(tableInput, burgerName, cb) {
         let queryString = `INSERT INTO ${tableInput} (burger_name) VALUES (${burgerName});`;
         console.log(queryString);
-        connection.query(queryString, vals, (err, result) => {
+        connection.query(queryString, (err, result) => {
             if (err) {
                 throw err;
             }
             cb(result);
         });
     },
-    // An example of objColVals would be {name: panther, sleepy: true}
     updateOne(tableInput, burgerID, cb) {
         let queryString = `UPDATE ${tableInput} SET devoured = !devoured WHERE id = ${burgerID};`;
         console.log(queryString);
