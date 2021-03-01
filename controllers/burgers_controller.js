@@ -8,20 +8,25 @@ router.get('/', (req, res) => {
     const dataObj = {
       burgers: data,
     };
-    console.log(dataObj);
     res.render('index', dataObj);
+  });
+});
+
+router.post('/api/burgers', (req, res) => {
+  console.log('req.body');
+  console.log(req.body.name);
+
+  burger.insertOne(req.body.name, (result) => {
+    // Send back the ID of the new quote
+    res.json({ id: result.insertId });
   });
 });
 
 router.put('/api/burgers/:id', (req, res) => {
   const burgerID = req.params.id;
-  console.log('Burger ID: ' + burgerID);
-  console.log('req.body: ' + req.body);
-  
   burger.updateOne(
     burgerID,
     (result) => {
-      console.log('Result: ' + result)
       if (result.changedRows === 0) {
         return res.status(404).end();
       }
