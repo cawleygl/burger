@@ -7,7 +7,7 @@ This application is a simple application that lets the user submit "burgers" to 
 Node.js, Express, MySQL, Handlebars, Heroku, HTML, CSS, Javascript
 
 ## Link to Deployed Application
-![Burger Eater](https://floating-ocean-83726.herokuapp.com/)
+[Burger Eater](https://floating-ocean-83726.herokuapp.com/)
 
 ## Screenshot
 ![Screenshot](https://github.com/cawleygl/burger/blob/main/assets/Screen%20Shot%202021-03-06%20at%202.36.04%20PM.png?raw=true)
