@@ -1,0 +1,9 @@
+body {
+    background-color: yellow;
+}
+.undevoured {
+    color: blue;
+}
+.devoured {
+    color: gray;
+}
